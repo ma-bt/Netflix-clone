@@ -5,13 +5,14 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import SignUpScreen from "./SignUpScreen";
 
 
 const LoginScreen = () => {
   const [signIn, setSignIn] = useState(false);
   return (
     <>
-      <Box position="relative" height="100%" bgImage="url('https://cdn.wccftech.com/wp-content/uploads/2018/07/Netflix-Ultra-01-Netflix-Logo.png')" bgSize="cover" bgRepeat="no-repeat" bgPosition="center ">
+      <Box position="relative" height="100%" bgImage="url('https://authors.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225.jpg')" bgSize="cover" bgRepeat="no-repeat" bgPosition="center ">
 
 
         <Box>
@@ -26,33 +27,41 @@ const LoginScreen = () => {
 
 
           <Box width="100%" z-zIndex="1" h="100vh" background="rgba(0,0,0,0.4)" bgGradient="linear-gradient(to top, rgba(0,0,0,0.8) 0,rgba(0,0,0,0)60%,rgba(0,0,0,0.8)100%)">
-            <Flex justifyContent="center" textAlign="center" alignItems="center" minW="100%" position="absolute" top="30%" zIndex="1" color="white" p="20px"  >
-              <VStack>
-                <Heading as='h2' size='xl' >
-                  Unlimited films, TV programmes and more.
-                </Heading>
-                <Text fontSize='md' lineHeight="1">
-                  Watch anywhere, Cancel at any time.
-                </Text>
-                <Text fontSize='sm' >
-                  Ready to Watch? Enter your email to create or restart your membership.
-                </Text>
-                <Flex pt="20px" minWidth='max-content' gap='0'>
 
-                  <HStack>
+            <Box>
+              {signIn ? (<SignUpScreen />) : (
+                <Flex justifyContent="center" textAlign="center" alignItems="center" minW="100%" position="absolute" top="30%" zIndex="1" color="white" p="20px"  >
 
-                    <Input mx="0" outline="none" type='email' bg="white" color="black" placeholder="Enter email here..." />
-                    <Button
-                      onClick={() => setSignIn(true)}
-                      colorScheme="red"
-                      mx="0"
-                      px="30px">Get Startet</Button>
-                  </HStack>
 
+                  <VStack>
+                    <Heading as='h2' size='xl' >
+                      Unlimited films, TV programmes and more.
+                    </Heading>
+                    <Text fontSize='md' lineHeight="1">
+                      Watch anywhere, Cancel at any time.
+                    </Text>
+                    <Text fontSize='sm' >
+                      Ready to Watch? Enter your email to create or restart your membership.
+                    </Text>
+                    <Flex pt="20px" minWidth='max-content' gap='0'>
+
+                      <HStack>
+
+                        <Input mx="0" outline="none" type='email' bg="white" color="black" placeholder="Enter email here..." />
+                        <Button
+                          onClick={() => setSignIn(true)}
+                          colorScheme="red"
+                          mx="0"
+                          px="30px">Get Started</Button>
+                      </HStack>
+
+                    </Flex>
+
+                  </VStack>
                 </Flex>
+              )}
+            </Box>
 
-              </VStack>
-            </Flex>
           </Box>
 
         </Box>
