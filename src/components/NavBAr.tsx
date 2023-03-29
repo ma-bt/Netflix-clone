@@ -29,7 +29,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Box bg={`${show ? "black" : "transparent"}`} w="100%" mx="auto" px="28px" pt="2" h={{
+      <Box bg={`${show ? "black" : "transparent"}`} w="100%"   pt="2" h={{
         base: "40px",
         md: '60px',
         xl: "65px"

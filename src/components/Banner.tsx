@@ -41,12 +41,12 @@ const Banner = () => {
         bgSize="cover"
         bgPosition="center "
         height="100vh"
-        // objectFit="contain"
+        //objectFit="contain"
         color="white"
         position="relative"
         top="0"
       >
-       
+
         <Box mx="60px" pt="140px" height="190px">
           <Heading fontSize="3rem" fontWeight="800" as='h3' paddingBottom="0.3rem ">{movie?.title || movie?.name || movie?.original_name}</Heading>
 
