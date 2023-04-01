@@ -7,7 +7,8 @@ import {
 import requests from "axios/request";
 
 const HomeScreen = () => {
-  return (<>
+  return (
+  <>
     <Box bg="black">
       <NavBar />
       <Banner />
@@ -17,7 +18,8 @@ const HomeScreen = () => {
       <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} isLargeRow/>
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} isLargeRow/>
     </Box>
-  </>);
+  </>
+  );
 }
 
 export default HomeScreen;

@@ -1,18 +1,19 @@
 
 import { lazy } from 'react';
-const IndexPage = lazy(() => import('pages/Index'));
+
 const HomeScreen = lazy(() => import('pages/HomeScreen'));
 const LoginScreen = lazy(() => import('pages/LoginScreen'));
+const ProfileScreen = lazy(() => import('pages/ProfileScreen'));
 
 
 export const routes = [
-  // {
-  //   path: '/',
-  //   element: <HomeScreen />,
-  // },
+  {
+    path: '/',
+    element: <HomeScreen />,
+  },
    {
-     path: '/',
-    element: <LoginScreen />,
+     path: '/profile',
+    element: <ProfileScreen />,
    },
 ];
 

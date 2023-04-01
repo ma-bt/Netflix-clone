@@ -6,10 +6,14 @@ import {
 
 } from '@chakra-ui/react';
 import { VStack } from '@chakra-ui/layout';
+import {useNavigate} from 'react-router-dom'
 import { useState, useEffect } from 'react';
 
 const NavBar = () => {
   const [show, handleShow] = useState(false)
+  const history = useNavigate();
+
+
   const TransitionNavBar = () => {
     if (window.scrollY > 100) {
       handleShow(true);
@@ -44,7 +48,8 @@ const NavBar = () => {
             xl: "146px"
           }} cursor="pointer"
             position="fixed" left="40px" top="4">
-            <Image src='https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png' alt='Logo' />
+            <Image
+             onClick={() => history("/")} src='https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png' alt='Logo' />
 
           </Box>
           <Spacer />
@@ -55,9 +60,11 @@ const NavBar = () => {
           }}
             cursor="pointer"
             position="fixed"
-            right="50px" top="2"
+            right="50px" top="4"
           >
-            <Image borderRadius="md" src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png' alt='Logo' />
+            <Image
+            onClick={() => history("/profile")}
+             borderRadius="md" src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png' alt='Logo' />
           </Box>
 
         </Flex>

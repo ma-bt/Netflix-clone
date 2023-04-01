@@ -58,7 +58,7 @@ const Banner = () => {
             {truncate(movie?.overview, 150)}
           </Text>
         </Box>
-        <Box position="absolute" height="10.4rem" bgGradient="linear(180deg,transparent,rgba(37,37,37,0.61),#111)"></Box>
+        <Box /* position="absolute" */ height="35.9rem" bgGradient="linear-gradient(180deg,transparent,rgba(37,37,37,0.66),#000)"></Box>
       </Box>
 
     </>

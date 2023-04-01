@@ -26,28 +26,17 @@ const SignUpScreen = () => {
 
   const register = (e: any) => {
     e.preventDefault();
-    // auth.createUserWithEmailAndPassword(
-    //   emailRef.current.value,
-    //   passwordRef.current.value
-    // )
-    //     .then((authUser: any) => {
-    //       console.log(authUser)
-    //     })
-    // .catch((err: any) => {
-    //   alert(err.message)
-    // })
-    // }
+
 
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential)
-        // const user = userCredential.user;
-        // ...
+        
       })
       .catch((error) => {
         alert(error.message)
-       
+
       });
   }
 
