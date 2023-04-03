@@ -9,7 +9,7 @@ import SignUpScreen from "./SignUpScreen";
 
 
 const LoginScreen = () => {
-  const [signIn, setSignIn] = useState(false);
+  const [signIn, setSignIn] = useState<boolean>(false);
   return (
     <>
       <Box position="relative" height="100%" bgImage="url('https://authors.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225.jpg')" bgSize="cover" bgRepeat="no-repeat" bgPosition="center ">
@@ -26,7 +26,7 @@ const LoginScreen = () => {
           <Button onClick={() => setSignIn(true)} position="fixed" right="30px" top="15px" px="9" colorScheme='red'>Sign In</Button>
 
 
-          <Box width="100%" z-zIndex="1" h="100vh" background="rgba(0,0,0,0.4)" bgGradient="linear-gradient(to top, rgba(0,0,0,0.8) 0,rgba(0,0,0,0)60%,rgba(0,0,0,0.8)100%)">
+          <Box width="100%" zIndex="1" h="100vh" background="rgba(0,0,0,0.4)" bgGradient="linear-gradient(to top, rgba(0,0,0,0.8) 0,rgba(0,0,0,0)60%,rgba(0,0,0,0.8)100%)">
 
             <Box>
               {signIn ? (<SignUpScreen />) : (

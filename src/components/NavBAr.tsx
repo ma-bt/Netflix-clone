@@ -38,7 +38,7 @@ const NavBar = () => {
         md: '60px',
         xl: "65px"
       }} transition="all 0.6s ease-out"
-        transitionTimingFunction="ease-out" position="fixed" zIndex={1}>
+        transitionTimingFunction="ease-out" position="fixed" zIndex={1} >
 
 
         <Flex minWidth='max-content' alignItems='center' gap='2'>
@@ -60,7 +60,7 @@ const NavBar = () => {
           }}
             cursor="pointer"
             position="fixed"
-            right="50px" top="4"
+            right="50px" top="2"
           >
             <Image
             onClick={() => history("/profile")}

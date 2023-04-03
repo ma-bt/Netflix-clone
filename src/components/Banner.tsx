@@ -2,7 +2,7 @@ import {
   Box,
   Heading,
   Text,
-  Button, ButtonGroup
+  Button, ButtonGroup, Flex, VStack
 } from "@chakra-ui/react";
 import requests from "axios/request";
 import { FaPlay } from 'react-icons/fa'
@@ -40,25 +40,32 @@ const Banner = () => {
         bg={`url('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`}
         bgSize="cover"
         bgPosition="center "
-        height="100vh"
+        maxheight="80vh"
         //objectFit="contain"
         color="white"
         position="relative"
         top="0"
       >
 
-        <Box mx="60px" pt="140px" height="190px">
-          <Heading fontSize="3rem" fontWeight="800" as='h3' paddingBottom="0.3rem ">{movie?.title || movie?.name || movie?.original_name}</Heading>
+        <Box mx="60px" pt="180px" height={
+          "190px"}>
+          <Box justifyContent="start">
+
+
+          <Heading fontSize="4rem" fontWeight="800" as='h1' paddingBottom="0.3rem ">{movie?.title || movie?.name || movie?.original_name}</Heading>
 
           <ButtonGroup spacing='3'>
             <Button px="10" colorScheme='gray' color="black"><FaPlay /> {"  "} Play </Button>
             <Button px="10" backgroundColor='rgba(51,51,51,0.5)' color="white">More Info</Button>
           </ButtonGroup>
-          <Text lineHeight="1.3" paddingTop="1rem" fontSize="1rem" height="80px">
+          <Text lineHeight="1.3" paddingTop="1rem" fontSize="1rem" height="80px" maxW="30rem">
             {truncate(movie?.overview, 150)}
           </Text>
+
+
+          </Box>
         </Box>
-        <Box /* position="absolute" */ height="35.9rem" bgGradient="linear-gradient(180deg,transparent,rgba(37,37,37,0.66),#000)"></Box>
+        <Box /* position="absolute" */ height="26.2rem" bgGradient="linear-gradient(180deg,transparent,rgba(37,37,37,0.66),#000)"></Box>
       </Box>
 
     </>

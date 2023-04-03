@@ -24,7 +24,7 @@ const SignUpScreen = () => {
 
   console.log(auth, "auth");
 
-  const register = (e: any) => {
+  const register = (e: React.MouseEvent) => {
     e.preventDefault();
 
 
@@ -32,7 +32,7 @@ const SignUpScreen = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential)
-        
+
       })
       .catch((error) => {
         alert(error.message)
@@ -42,7 +42,7 @@ const SignUpScreen = () => {
 
 
 
-  const signIn = (e: any) => {
+  const signIn = (e: React.MouseEvent) => {
     e.preventDefault();
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
